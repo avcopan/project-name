@@ -1,10 +1,11 @@
 [workspace]
-channels = ["conda-forge"]
+channels = ["conda-forge", "avcopan"]
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 preview = ["pixi-build"]
 
 [dependencies]
 project-name = { path = "." }
+lower-level-package = "==0.0.0"
 
 [package]
 name = "project-name"
