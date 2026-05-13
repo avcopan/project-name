@@ -21,6 +21,9 @@ ignore-pypi-mapping = false
 [package.host-dependencies]
 uv = "*"
 
+[feature.local.dependencies]
+lower-level-package = { path = "../lower-level-package" }
+
 [feature.dev.dependencies]
 uv = "*"
 ruff = "*"
@@ -45,6 +48,7 @@ sphinx-autodoc2 = "*"
 [environments]
 default = { solve-group = "default" }
 dev = { features = ["dev", "docs"], solve-group = "default"}
+local = { features = ["local", "dev", "docs"] }
 
 [feature.dev.tasks]
 # Manage pyproject.toml with uv
